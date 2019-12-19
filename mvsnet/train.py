@@ -30,7 +30,7 @@ from homography_warping import get_homographies, homography_warping
 # paths
 tf.app.flags.DEFINE_string('dtu_data_root', '/data/dtu/', 
                            """Path to dtu dataset.""")
-tf.app.flags.DEFINE_string('log_dir', '/data/tf_log',
+tf.app.flags.DEFINE_string('dirLog', '/data/tf_log',
                            """Path to store the log.""")
 tf.app.flags.DEFINE_string('model_dir', '/data/tf_model',
                            """Path to save the model.""")
@@ -287,7 +287,7 @@ def train(traning_list):
             # initialization
             total_step = 0
             sess.run(init_op)
-            summary_writer = tf.summary.FileWriter(FLAGS.log_dir, sess.graph)
+            summary_writer = tf.summary.FileWriter(FLAGS.dirLog, sess.graph)
 
             # load pre-trained model
             if FLAGS.use_pretrain:
