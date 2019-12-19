@@ -234,7 +234,7 @@ def gen_dtu_resized_path(dtu_data_folder, mode='training'):
     sample_list = []
 
     # parse camera pairs
-    cluster_file_path = dtu_data_folder + '/Cameras/pair.txt'
+    cluster_file_path = dtu_data_folder + '/pair.txt'
 
     # cluster_list = open(cluster_file_path).read().split()
     cluster_list = file_io.FileIO(cluster_file_path, mode='r').read().split()
@@ -317,7 +317,7 @@ def gen_dtu_mvs_path(dtu_data_folder, mode='training'):
     sample_list = []
 
     # parse camera pairs
-    cluster_file_path = dtu_data_folder + '/Cameras/pair.txt'
+    cluster_file_path = dtu_data_folder + '/pair.txt'
     cluster_list = open(cluster_file_path).read().split()
 
     # 3 sets
