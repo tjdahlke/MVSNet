@@ -7,7 +7,8 @@ RUN apt-get update && apt-get install -y \
     python-dev \
     build-essential \
     wget \
-    python-tk
+    python-tk \
+    unrar
 
 RUN apt-get update && apt-get install -y \    
     libsm6 \
